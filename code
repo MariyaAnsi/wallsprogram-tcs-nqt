@@ -1,0 +1,30 @@
+import java.util.*;
+public class wall {
+    
+    public static void main(String[] args){
+        int intecost=18,extcost=12,i;
+      double Iface=0.0,Eface=0.0,facecost1=0.0,facecost2=0.0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no of Interior walls:");
+         int Iwall=sc.nextInt();
+        System.out.println("Enter no of exterior walls:");
+        int Ewall=sc.nextInt();
+        
+        if(Iwall==0 && Ewall==0){System.out.println("user input is 0"); System.exit(0);}
+        System.out.println("Enter surface area of interior walls");
+        for(i=0;i<Iwall;i++){
+            Iface=sc.nextDouble();
+           facecost1+=intecost*Iface;
+        }
+        System.out.println("Enter surface area of exterior walls");
+        for(i=0;i<Ewall;i++){
+            Eface=sc.nextDouble();
+            facecost2+=extcost*Eface;
+        }
+        
+       double total=facecost1+facecost2;
+        System.out.printf("total:%.1f",total);
+    }
+}
+
+
